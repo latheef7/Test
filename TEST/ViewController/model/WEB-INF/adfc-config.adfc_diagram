@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">HoriScroll_911</property>
+      <property
+         name="x">161.35156</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>HoriScroll_911&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">162.09766</property>
+      <property
+         name="page">/HoriScroll_911.jspx</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">AttachDetach_1073</property>
+      <property
+         name="x">503.7129</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>AttachDetach_1073&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">160.09766</property>
+      <property
+         name="page">/AttachDetach_1073.jspx</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">Next</property>
+      <property
+         name="sdm:polyPoints">R50,202.35156,161.74707,462.7129,159.74707,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="View3"
+      to="View2">
+      <property
+         name="fromOutcome">Back</property>
+      <property
+         name="sdm:polyPoints">L54,462.7129,163.24707,202.37845,165.24707,R54</property>
+   </ControlFlowCase>
+</SDM>

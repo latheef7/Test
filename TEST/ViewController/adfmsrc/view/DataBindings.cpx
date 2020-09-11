@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.22.48" id="DataBindings"
+             SeparateXMLFiles="false" Package="view" ClientType="Generic">
+  <pageMap>
+    <page path="/HoriScroll_911.jspx" usageId="view_HoriScroll_911PageDef"/>
+    <page path="/AttachDetach_1073.jspx" usageId="view_AttachDetach_1073PageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_HoriScroll_911PageDef" path="view.pageDefs.HoriScroll_911PageDef"/>
+    <page id="view_AttachDetach_1073PageDef" path="view.pageDefs.AttachDetach_1073PageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AMDataControl" Package="model.module"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

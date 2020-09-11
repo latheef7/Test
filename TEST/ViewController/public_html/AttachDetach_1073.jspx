@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="AttachDetach_1073.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:panelCollection id="pc1" styleClass="AFStretchWidth">
+                    <f:facet name="menus"/>
+                    <f:facet name="toolbar"/>
+                    <f:facet name="statusbar"/>
+                    <af:table value="#{bindings.DataRVO1.collectionModel}" var="row"
+                              rows="#{bindings.DataRVO1.rangeSize}"
+                              emptyText="#{bindings.DataRVO1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              rowBandingInterval="0" fetchSize="#{bindings.DataRVO1.rangeSize}"
+                              filterModel="#{bindings.DataRVO1Query.queryDescriptor}" filterVisible="true"
+                              queryListener="#{bindings.DataRVO1Query.processQuery}" varStatus="vs" id="t1"
+                              scrollPolicy="page">
+                        <af:column sortProperty="#{bindings.DataRVO1.hints.EmployeeId.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.DataRVO1.hints.EmployeeId.label}" id="c1">
+                            <af:outputText value="#{row.EmployeeId}"
+                                           shortDesc="#{bindings.DataRVO1.hints.EmployeeId.tooltip}" id="ot1">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.DataRVO1.hints.EmployeeId.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.DataRVO1.hints.FirstName.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.DataRVO1.hints.FirstName.label}" id="c2">
+                            <af:outputText value="#{row.FirstName}"
+                                           shortDesc="#{bindings.DataRVO1.hints.FirstName.tooltip}" id="ot2"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.DataRVO1.hints.LastName.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.DataRVO1.hints.LastName.label}" id="c3">
+                            <af:outputText value="#{row.LastName}"
+                                           shortDesc="#{bindings.DataRVO1.hints.LastName.tooltip}" id="ot3"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.DataRVO1.hints.Email.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.DataRVO1.hints.Email.label}" id="c4">
+                            <af:outputText value="#{row.Email}" shortDesc="#{bindings.DataRVO1.hints.Email.tooltip}"
+                                           id="ot4"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.DataRVO1.hints.PhoneNumber.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.DataRVO1.hints.PhoneNumber.label}" id="c5">
+                            <af:outputText value="#{row.PhoneNumber}"
+                                           shortDesc="#{bindings.DataRVO1.hints.PhoneNumber.tooltip}" id="ot5"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.DataRVO1.hints.HireDate.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.DataRVO1.hints.HireDate.label}" id="c6">
+                            <f:facet name="filter">
+                                <af:inputDate value="#{bindings.DataRVO1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.HireDate.value}"
+                                              id="id1">
+                                    <af:convertDateTime pattern="#{bindings.DataRVO1.hints.HireDate.format}"/>
+                                </af:inputDate>
+                            </f:facet>
+                            <af:outputText value="#{row.HireDate}"
+                                           shortDesc="#{bindings.DataRVO1.hints.HireDate.tooltip}" id="ot6">
+                                <af:convertDateTime pattern="#{bindings.DataRVO1.hints.HireDate.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.DataRVO1.hints.JobId.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.DataRVO1.hints.JobId.label}" id="c7">
+                            <af:outputText value="#{row.JobId}" shortDesc="#{bindings.DataRVO1.hints.JobId.tooltip}"
+                                           id="ot7"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.DataRVO1.hints.Salary.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.DataRVO1.hints.Salary.label}" id="c8">
+                            <af:outputText value="#{row.Salary}" shortDesc="#{bindings.DataRVO1.hints.Salary.tooltip}"
+                                           id="ot8">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.DataRVO1.hints.Salary.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.DataRVO1.hints.CommissionPct.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.DataRVO1.hints.CommissionPct.label}" id="c9">
+                            <af:outputText value="#{row.CommissionPct}"
+                                           shortDesc="#{bindings.DataRVO1.hints.CommissionPct.tooltip}" id="ot9">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.DataRVO1.hints.CommissionPct.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.DataRVO1.hints.ManagerId.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.DataRVO1.hints.ManagerId.label}" id="c10">
+                            <af:outputText value="#{row.ManagerId}"
+                                           shortDesc="#{bindings.DataRVO1.hints.ManagerId.tooltip}" id="ot10">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.DataRVO1.hints.ManagerId.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.DataRVO1.hints.DepartmentId.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.DataRVO1.hints.DepartmentId.label}" id="c11">
+                            <af:outputText value="#{row.DepartmentId}"
+                                           shortDesc="#{bindings.DataRVO1.hints.DepartmentId.tooltip}" id="ot11">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.DataRVO1.hints.DepartmentId.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <!--<af:column sortProperty="#{bindings.DataRVO1.hints.DepartmentId1.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.DataRVO1.hints.DepartmentId1.label}" id="c12">
+                            <af:outputText value="#{row.DepartmentId1}"
+                                           shortDesc="#{bindings.DataRVO1.hints.DepartmentId1.tooltip}" id="ot12">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.DataRVO1.hints.DepartmentId1.format}"/>
+                            </af:outputText>
+                        </af:column>-->
+                        <!--<af:column sortProperty="#{bindings.DataRVO1.hints.DepartmentName.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.DataRVO1.hints.DepartmentName.label}"
+                                   id="c13">
+                            <af:outputText value="#{row.DepartmentName}"
+                                           shortDesc="#{bindings.DataRVO1.hints.DepartmentName.tooltip}" id="ot13"/>
+                        </af:column>-->
+                        <!--<af:column sortProperty="#{bindings.DataRVO1.hints.ManagerId1.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.DataRVO1.hints.ManagerId1.label}" id="c14">
+                            <af:outputText value="#{row.ManagerId1}"
+                                           shortDesc="#{bindings.DataRVO1.hints.ManagerId1.tooltip}" id="ot14">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.DataRVO1.hints.ManagerId1.format}"/>
+                            </af:outputText>
+                        </af:column>-->
+                        <!--<af:column sortProperty="#{bindings.DataRVO1.hints.LocationId.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.DataRVO1.hints.LocationId.label}" id="c15">
+                            <af:outputText value="#{row.LocationId}"
+                                           shortDesc="#{bindings.DataRVO1.hints.LocationId.tooltip}" id="ot15">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.DataRVO1.hints.LocationId.format}"/>
+                            </af:outputText>
+                        </af:column>-->
+                    </af:table>
+                </af:panelCollection>
+                <af:spacer id="s1" height="20" width="20"/>
+                <af:button text="Back" id="b1" action="Back"/>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>
